@@ -1,0 +1,105 @@
+{
+    "name" : "Island",
+    "description" : "One of the most default boards in the standard game. An island surrounded by conveyorbelts",
+    "width" : 12,
+    "height" : 12,
+    "tiles" : [
+        { "x" : 1, "y" : 1, "type" : "hole" },
+        { "x" : 1, "y" : 2, "type" : "hole" },
+        { "x" : 2, "y" : 1, "type" : "hole" },
+
+        { "x" : 9, "y" : 1, "type" : "hole" },
+        { "x" : 10, "y" : 1, "type" : "hole" },
+        { "x" : 10, "y" : 2, "type" : "hole" },
+
+        { "x" : 1, "y" : 9, "type" : "hole" },
+        { "x" : 1, "y" : 10, "type" : "hole" },
+        { "x" : 2, "y" : 10, "type" : "hole" },
+
+        { "x" : 9, "y" : 10, "type" : "hole" },
+        { "x" : 10, "y" : 10, "type" : "hole" },
+        { "x" : 10, "y" : 9, "type" : "hole" },
+
+        { "x" : 2, "y" : 2, "type" : "belt", "direction" : "left" },
+        { "x" : 3, "y" : 2, "type" : "belt", "direction" : "left" },
+        { "x" : 4, "y" : 2, "type" : "belt", "direction" : "left" },
+        { "x" : 5, "y" : 2, "type" : "belt", "direction" : "left" },
+        { "x" : 6, "y" : 2, "type" : "belt", "direction" : "left" },
+        { "x" : 7, "y" : 2, "type" : "belt", "direction" : "left" },
+        { "x" : 8, "y" : 2, "type" : "belt", "direction" : "left" },
+
+        { "x" : 9, "y" : 2, "type" : "belt", "direction" : "down" },
+        { "x" : 9, "y" : 3, "type" : "belt", "direction" : "down" },
+        { "x" : 9, "y" : 4, "type" : "belt", "direction" : "down" },
+        { "x" : 9, "y" : 5, "type" : "belt", "direction" : "down" },
+        { "x" : 9, "y" : 6, "type" : "belt", "direction" : "down" },
+        { "x" : 9, "y" : 7, "type" : "belt", "direction" : "down" },
+        { "x" : 9, "y" : 8, "type" : "belt", "direction" : "down" },
+        
+        { "x" : 9, "y" : 9, "type" : "gear", "direction" : "right" },
+        
+        { "x" : 8, "y" : 9, "type" : "belt", "direction" : "right" },
+        { "x" : 7, "y" : 9, "type" : "belt", "direction" : "right" },
+        { "x" : 6, "y" : 9, "type" : "belt", "direction" : "right" },
+        { "x" : 5, "y" : 9, "type" : "belt", "direction" : "right" },
+        { "x" : 4, "y" : 9, "type" : "belt", "direction" : "right" },
+        { "x" : 3, "y" : 9, "type" : "belt", "direction" : "right" },
+        
+        { "x" : 2, "y" : 9, "type" : "gear", "direction" : "right" },
+        
+        { "x" : 2, "y" : 8, "type" : "belt", "direction" : "up" },
+        { "x" : 2, "y" : 7, "type" : "belt", "direction" : "up" },
+        { "x" : 2, "y" : 6, "type" : "belt", "direction" : "up" },
+        { "x" : 2, "y" : 5, "type" : "belt", "direction" : "up" },
+        { "x" : 2, "y" : 4, "type" : "belt", "direction" : "up" },
+        { "x" : 2, "y" : 3, "type" : "belt", "direction" : "up" },
+
+        { "x" : 3, "y" : 3, "type" : "gear", "direction" : "left" },
+        
+        { "x" : 4, "y" : 3, "type" : "belt", "direction" : "right" },
+        { "x" : 5, "y" : 3, "type" : "belt", "direction" : "right" },
+        { "x" : 6, "y" : 3, "type" : "belt", "direction" : "right" },
+        { "x" : 7, "y" : 3, "type" : "belt", "direction" : "right" },
+        
+        { "x" : 8, "y" : 3, "type" : "gear", "direction" : "left" },
+
+        { "x" : 8, "y" : 4, "type" : "belt", "direction" : "up" },
+        { "x" : 8, "y" : 5, "type" : "belt", "direction" : "up" },
+        { "x" : 8, "y" : 6, "type" : "belt", "direction" : "up" },
+        { "x" : 8, "y" : 7, "type" : "belt", "direction" : "up" },
+
+        { "x" : 8, "y" : 8, "type" : "gear", "direction" : "left" },
+
+        { "x" : 7, "y" : 8, "type" : "belt", "direction" : "left" },
+        { "x" : 6, "y" : 8, "type" : "belt", "direction" : "left" },
+        { "x" : 5, "y" : 8, "type" : "belt", "direction" : "left" },
+        { "x" : 4, "y" : 8, "type" : "belt", "direction" : "left" },
+        
+        { "x" : 3, "y" : 8, "type" : "gear", "direction" : "left" },
+
+        { "x" : 3, "y" : 7, "type" : "belt", "direction" : "down" },
+        { "x" : 3, "y" : 6, "type" : "belt", "direction" : "down" },
+        { "x" : 3, "y" : 5, "type" : "belt", "direction" : "down" },
+        { "x" : 3, "y" : 4, "type" : "belt", "direction" : "down" },
+        
+        { "x" : 4, "y" : 4, "type" : "hole" },
+        { "x" : 5, "y" : 4, "type" : "hole" },
+        { "x" : 4, "y" : 5, "type" : "hole" },
+        
+        { "x" : 7, "y" : 7, "type" : "hole" },
+        { "x" : 6, "y" : 7, "type" : "hole" },
+        { "x" : 7, "y" : 6, "type" : "hole" },
+        
+        { "x" : 6, "y" : 6, "type" : "repair2x" },
+
+        { "x" : 6, "y" : 5, "type" : "belt", "direction" : "right" },
+        { "x" : 7, "y" : 5, "type" : "belt", "direction" : "right" },
+        
+        { "x" : 5, "y" : 6, "type" : "belt", "direction" : "left" },
+        { "x" : 4, "y" : 6, "type" : "belt", "direction" : "left" },
+        
+        { "x" : 11, "y" : 11, "type" : "repair" },
+        { "x" : 0, "y" : 2, "type" : "belt", "direction" : "left" }
+
+    ]
+}

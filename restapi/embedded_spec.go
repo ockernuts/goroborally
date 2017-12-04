@@ -175,17 +175,7 @@ func init() {
           "$ref": "#/definitions/direction"
         },
         "type": {
-          "description": "Type of the tile on the board. A plain tile is by default used for all tiles of a board for which no tile element was even given. As such ",
-          "type": "string",
-          "default": "plain",
-          "enum": [
-            "plain",
-            "hole",
-            "belt",
-            "fastbelt",
-            "repair",
-            "repair2x"
-          ]
+          "$ref": "#/definitions/tileType"
         },
         "x": {
           "description": "position of the tile on the board. Range: 0..board.width-1",
@@ -200,6 +190,19 @@ func init() {
           "minimum": 1
         }
       }
+    },
+    "tileType": {
+      "description": "Type of the tile on the board. A plain tile is by default used for all tiles of a board for which no tile element was even given. As such ",
+      "type": "string",
+      "default": "plain",
+      "enum": [
+        "plain",
+        "hole",
+        "belt",
+        "fastbelt",
+        "repair",
+        "repair2x"
+      ]
     }
   }
 }`))

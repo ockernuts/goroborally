@@ -129,21 +129,25 @@
         }
       }
     },
+    "tileType" : {
+      "type" :"string",
+      "enum" : [
+        "plain",
+        "hole",
+        "belt",
+        "fastbelt",
+        "repair",
+        "repair2x"
+        ],
+      "description" : "Type of the tile on the board. A plain tile is by default used for all tiles of a board for which no tile element was even given. As such ",
+      "default": "plain"
+    },
+
     "tile": {
       "required" : [ "type", "x", "y"],
       "properties": {
         "type" : {
-          "type" :"string",
-          "enum" : [
-            "plain",
-            "hole",
-            "belt",
-            "fastbelt",
-            "repair",
-            "repair2x"
-            ],
-          "description" : "Type of the tile on the board. A plain tile is by default used for all tiles of a board for which no tile element was even given. As such ",
-          "default": "plain"
+          "$ref" : "#/definitions/tileType"
         },
         "x" : {
           "type" : "integer",

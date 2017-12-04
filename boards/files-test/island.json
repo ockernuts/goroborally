@@ -99,7 +99,7 @@
         { "x" : 4, "y" : 6, "type" : "belt", "direction" : "left" },
         
         { "x" : 11, "y" : 11, "type" : "repair" },
-        { "x" : 0, "y" : 2, "type" : "belt", "direction" : "left" }
+        { "x" : 0, "y" : 2, "type" : "repair" }
 
     ]
 }

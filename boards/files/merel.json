@@ -1,0 +1,9 @@
+{
+    "name" : "Merel",
+    "description" : "Demo board for my lovely daughter",
+    "width" : 4,
+    "height" : 4,
+    "tiles" : [
+        { "x" : 3, "y": 1, "type" : "repair2x"  }
+    ]
+}

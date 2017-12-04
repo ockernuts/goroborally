@@ -6,8 +6,6 @@ package models
 // Editing this file might prove futile when you re-run the swagger generate command
 
 import (
-	"encoding/json"
-
 	strfmt "github.com/go-openapi/strfmt"
 
 	"github.com/go-openapi/errors"
@@ -22,9 +20,9 @@ type Tile struct {
 	// direction
 	Direction Direction `json:"direction,omitempty"`
 
-	// Type of the tile on the board. A plain tile is by default used for all tiles of a board for which no tile element was even given. As such
+	// type
 	// Required: true
-	Type *string `json:"type"`
+	Type TileType `json:"type"`
 
 	// position of the tile on the board. Range: 0..board.width-1
 	// Required: true
@@ -83,49 +81,12 @@ func (m *Tile) validateDirection(formats strfmt.Registry) error {
 	return nil
 }
 
-var tileTypeTypePropEnum []interface{}
-
-func init() {
-	var res []string
-	if err := json.Unmarshal([]byte(`["plain","hole","belt","fastbelt","repair","repair2x"]`), &res); err != nil {
-		panic(err)
-	}
-	for _, v := range res {
-		tileTypeTypePropEnum = append(tileTypeTypePropEnum, v)
-	}
-}
-
-const (
-	// TileTypePlain captures enum value "plain"
-	TileTypePlain string = "plain"
-	// TileTypeHole captures enum value "hole"
-	TileTypeHole string = "hole"
-	// TileTypeBelt captures enum value "belt"
-	TileTypeBelt string = "belt"
-	// TileTypeFastbelt captures enum value "fastbelt"
-	TileTypeFastbelt string = "fastbelt"
-	// TileTypeRepair captures enum value "repair"
-	TileTypeRepair string = "repair"
-	// TileTypeRepair2x captures enum value "repair2x"
-	TileTypeRepair2x string = "repair2x"
-)
-
-// prop value enum
-func (m *Tile) validateTypeEnum(path, location string, value string) error {
-	if err := validate.Enum(path, location, value, tileTypeTypePropEnum); err != nil {
-		return err
-	}
-	return nil
-}
-
 func (m *Tile) validateType(formats strfmt.Registry) error {
 
-	if err := validate.Required("type", "body", m.Type); err != nil {
-		return err
-	}
-
-	// value enum
-	if err := m.validateTypeEnum("type", "body", *m.Type); err != nil {
+	if err := m.Type.Validate(formats); err != nil {
+		if ve, ok := err.(*errors.Validation); ok {
+			return ve.ValidateName("type")
+		}
 		return err
 	}
 

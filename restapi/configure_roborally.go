@@ -49,7 +49,7 @@ func configureAPI(api *operations.RoborallyAPI) http.Handler {
 
 	api.JSONProducer = runtime.JSONProducer()
 
-	boardProvider = boards.NewBoardProviderFromFile(boardsPath)
+	boardProvider = boards.NewBoardProviderFromFile(boardsPath, api.Formats())
 
 	api.BoardGetBoardByNameHandler = board.GetBoardByNameHandlerFunc(func(params board.GetBoardByNameParams) middleware.Responder {
 		mBoard, err := boardProvider.GetBoardByName(params.Name)

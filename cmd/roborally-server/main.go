@@ -18,6 +18,12 @@ import (
 // Make sure not to overwrite this file after you generated it because all your edits would be lost!
 
 func main() {
+	log.Println("Starting Roborally-server")
+	cwd, err := os.Getwd()
+	if err != nil {
+		log.Panicf("Cannot get current working dir. Error: %v", err)
+	}
+	log.Println("Current working directory:", cwd)
 
 	swaggerSpec, err := loads.Analyzed(restapi.SwaggerJSON, "")
 	if err != nil {
